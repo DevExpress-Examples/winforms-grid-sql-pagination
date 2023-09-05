@@ -3,14 +3,14 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T831243)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# winforms-xtragrid-sqlpagination
-.NET, WinForms, XtraGrid Suite 
+# WinForms Data Grid - Implement a pager using the Data Navigator
 
-### XtraGrid - How to implement a pager using Embedded Navigator
+In this example:
 
-1. Enable Embedded Navigator using the [GridControl.UseEmbeddedNavigator](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGrid.GridControl.UseEmbeddedNavigator) property.
-2. Access Embedded Navigator using the [GridControl.EmbeddedNavigator](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGrid.GridControl.EmbeddedNavigator) property and add two [custom buttons](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.NavigatorButtonsBase.CustomButtons) - **NextPage** and **PrevPage**. Then, specify [Tag](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.NavigatorButtonBase.Tag) for each button to distinguish buttons in code.
-3. Handle the [GridControl.EmbeddedNavigator.ButtonClick](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.NavigatorBase.ButtonClick) event. In this event handler, increment/decrement the current page index, retrieve a new data source, and assign it to the [GridControl.DataSource](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGrid.GridControl.DataSource) property.
+1. Enable the [GridControl.UseEmbeddedNavigator](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGrid.GridControl.UseEmbeddedNavigator) property to display the Data Navigator within the Grid control.
+2. Use the [GridControl.EmbeddedNavigator](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGrid.GridControl.EmbeddedNavigator) property and add two [custom buttons](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.NavigatorButtonsBase.CustomButtons) (**NextPage**, **PrevPage**).
+3. Specify the [Tag](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.NavigatorButtonBase.Tag) property for each button to distinguish custom buttons in code.
+4. Handle the [GridControl.EmbeddedNavigator.ButtonClick](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.NavigatorBase.ButtonClick) event to increment/decrement the current page index, retrieve a new data source, and assign it to the [GridControl.DataSource](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGrid.GridControl.DataSource) property.
 
 ```csharp
 private void EmbeddedNavigator_ButtonClick(object sender, NavigatorButtonClickEventArgs e) {
@@ -44,3 +44,8 @@ Private Sub EmbeddedNavigator_ButtonClick(ByVal sender As Object, ByVal e As Nav
 	Me.GridControl.DataSource = GetData(Me.CurrentPageIndex)
 End Sub
 ```
+
+## Documentation
+
+* [Data Navigator](https://docs.devexpress.com/WindowsForms/522/controls-and-libraries/data-grid/visual-elements/grid-control-elements/data-navigator)
+* [How to: Hide Specific Buttons in the Embedded Navigator](https://docs.devexpress.com/WindowsForms/3057/controls-and-libraries/data-grid/examples/navigation-and-selection/how-to-hide-specific-buttons-in-the-embedded-navigator)
