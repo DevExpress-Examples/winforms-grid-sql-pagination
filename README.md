@@ -49,3 +49,8 @@ End Sub
 
 * [Data Navigator](https://docs.devexpress.com/WindowsForms/522/controls-and-libraries/data-grid/visual-elements/grid-control-elements/data-navigator)
 * [How to: Hide Specific Buttons in the Embedded Navigator](https://docs.devexpress.com/WindowsForms/3057/controls-and-libraries/data-grid/examples/navigation-and-selection/how-to-hide-specific-buttons-in-the-embedded-navigator)
+
+
+## See Also
+
+* [How to implement pagination](https://supportcenter.devexpress.com/ticket/details/t902854/grid-control-how-to-implement-the-pagination-functionality)
